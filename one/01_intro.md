@@ -1,6 +1,6 @@
 !SLIDE cover
 
-# Software Development at Trabe
+# Surviving Software Development
 
 !SLIDE image
 
@@ -18,6 +18,7 @@
 
 ![Men at work](men_at_work.png)
 
+
 !SLIDE
 
 # Shiny happy opinionated people
@@ -26,10 +27,10 @@
 
 # Contents
 
-* Ideas, Methodology & Tools
+* Ideas
+* Tools
 * Real life examples
 * The many hells of Computer Science
-* The "six" commandments
 
 !SLIDE section
 
@@ -78,32 +79,38 @@
 ## KISS & DRY driven
 
 <!--
-
 son de OO pero aplicables a otro tipo de paradigmas
-
-
-Single responsibility principle
-  a class should have only a single responsibility.
-
-Open/closed principle
-  “software entities … should be open for extension, but closed for modification”.
-
-Liskov substitution principle
-  “objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program”. See also design by contract.
-
-Interface segregation principle
-  “many client-specific interfaces are better than one general-purpose interface.”[5]
-
-Dependency inversion principle
-  one should “Depend upon Abstractions. Do not depend upon concretions.”[5]
-  Dependency injection is one method of following this principle.
 -->
+
+!SLIDE
+
+# S = Single Responsability
+## A class should have only a single responsibility
+
+!SLIDE
+
+# O =  Open/Closed
+## Open for extension. Closed for modification
+
+!SLIDE
+
+# L = Liskov Substitution
+## objects in a program should be replaceable with <br/>instances of their subtypes without altering<br/>the correctness of that program
 
 
 !SLIDE
 
-# S for SRP
-## Single Responsability Principle
+# I = Interface segregation
+## Many client-specific interfaces are better than<br/>one general-purpose interface
+
+!SLIDE
+# D = Dependency inversion
+## Depend upon Abstractions. Do not depend upon concretions (i.e. Dependency injection)
+
+!SLIDE
+# We are always SRP driven
+# You should be too
+
 
 !SLIDE
 
@@ -151,6 +158,18 @@ Dependency inversion principle
 * DI
 * Refactoring
 * CI
+
+!SLIDE bullets title-first chain-bullets
+
+# TEST, TEST, TEST
+
+* Complex test
+* &#x2193;
+* Bad design
+* &#x2193;
+* Refactor & DI
+* &#x2193;
+* Better design. Better API
 
 <!--
   DI -> Dependency Injection

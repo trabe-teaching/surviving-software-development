@@ -1,6 +1,6 @@
 !SLIDE section
 
-# Methodology
+# Tools
 
 !SLIDE
 
@@ -8,30 +8,15 @@
 
 ## Agile, sort of __: )__
 
-!SLIDE bullets bullets-first
+!SLIDE
 
-# Project management
-
-* Weekly meetings
-* Kanban
-* Postmortem
-
-!SLIDE image
-
-![Trabeboard](trabeboard.png)
-
-<!--
-  Columnas, restricciones, calles
-  Indicadores: más proyectos en desarrollo de personal. Mala cosa.
--->
+# Tools
+## Continous improvement, most of the time __: )__
 
 
-!SLIDE bullets many-bullets title-first
-
+!SLIDE bullets title-first
 # Project development
 
-* Kanban + Scrum (sort of)
-* Continuous vs Scheduled delivery
 * TDD
 * Code reviews
 * Pair programming
@@ -41,9 +26,6 @@
   Pair programming: problemas chungos, formación, cansancio y ganas de no hacer nada a solas xD
 -->
 
-!SLIDE section
-
-# Tools
 
 !SLIDE image
 

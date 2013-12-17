@@ -50,6 +50,7 @@
 
 ![Mother of God](mother_of_god.png)
 
+
 !SLIDE
 
 # Encoding hell
@@ -67,6 +68,10 @@
 <!--
   Ejemplo de cosa incontrolable
 -->
+
+!SLIDE image
+
+![Fuck timezones](fuck_timezones.png)
 
 !SLIDE
 
@@ -134,6 +139,49 @@
 !SLIDE image
 
 ![Mina deploy](mina.gif)
+
+
+!SLIDE
+
+# Migration hell
+
+## Data evolves along your code
+## Use some way of control/script/automate migrations
+## i.e RoR migrations, Flyway for Java
+
+!SLIDE code smallest
+
+    @@@ ruby
+
+    add_column :invoices, :report_id, :integer
+
+    Invoices.find_each do |invoice|
+      order = Order.where(number: invoice.order_number)
+      invoice.order = order
+    end
+
+!SLIDE
+
+# Beware of data massaging
+## Either complex or simple __¬¬__
+
+
+!SLIDE code smallest
+
+    @@@ ruby
+
+    add_column :invoices, :report_id, :integer
+
+    Invoices.find_each do |invoice|
+      order = Order.where(number: invoice.order_number)
+
+      raise "Fuck" if order.client_id != invoice.client_id
+
+      invoice.order = order
+    end
+
+
+
 
 !SLIDE
 
@@ -217,8 +265,7 @@
 
 !SLIDE section
 
-# The "six" commandments
-## Parting note
+# Parting note
 
 
 !SLIDE bullets title-first chain-bullets

@@ -8,7 +8,7 @@
 ## http://ir.gl/trabe-reads
 
 !SLIDE
-# Do your EOM projects at Trabe
+# Do your PFC at Trabe
 
 !SLIDE
 # Questions?
