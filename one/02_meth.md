@@ -11,7 +11,7 @@
 !SLIDE
 
 # Tools
-## Continous improvement, most of the time __: )__
+## Continous improvement. Always trying new stuff __: )__
 
 
 !SLIDE bullets title-first

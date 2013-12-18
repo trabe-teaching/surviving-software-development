@@ -29,7 +29,7 @@
 
 * Ideas
 * Tools
-* Real life examples
+* Real life problems & solutions
 * The many hells of Computer Science
 
 !SLIDE section

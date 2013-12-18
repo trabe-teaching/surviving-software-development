@@ -1,73 +1,13 @@
 !SLIDE section
 
-# Real life examples
+# Real life problems & solutions
 
-!SLIDE section
+!SLIDE
 
-# FEDERICO
-
-<!--
-Ejemplo de arquitectura para integrar múltiples aplicaciones
--->
-
-!SLIDE problem
-
-# Problem
-
-## Signup/signin on multiple services
-## Consolidate personal info
-
-!SLIDE solution bullets bullets-first
-
-# Solution
-
-* Procedure repository
-* Orchestrate services (Service Bus)
-* Single Sign On
-
-!SLIDE image
-
-![Federico ideal](federico_ideal.jpg)
-
-<!--
-Solución ideal:
-Federacion de autenticacion
-Bus + Pull+Push + Operaciones WS
-Webs diferentes tecnologías consumen WS
--->
-
-!SLIDE image
-
-![Federico full](federico_full.jpg)
-
-<!--
-Solución de compromiso
-Sólo Pull, Tareas periódicas para push
-Adaptadores: BD, LDAP, WS, Comandos SSH, etc.
-
-RObot de keystroke xDDDD :p
--->
-
-!SLIDE bullets bullets-first
-
-# Technology
-
-* Java stack
-* Ruby for automation
-
-<!--
-Herramientas de build y despliegue específicas: Rake
--->
-
-!SLIDE section
-
+## Context
 # NeoSAI
+## A Laboratory Management System
 
-!SLIDE problem
-
-# Context
-
-## Laboratory Management System
 
 !SLIDE image
 
@@ -93,68 +33,130 @@ Herramientas de build y despliegue específicas: Rake
 * Complex tasks: Single-page app + REST
 
 
-!SLIDE problem
+!SLIDE bullets title-first
 
-# Problem
+# WTF are REST APIs?
 
-## Integrate new & legacy app
+* Theory<br/>duh, duh, duh (and more bullshit)
+* Practice<br/>way to comunicate apps/systems through HTTP
 
+!SLIDE bullets title-first
 
-!SLIDE solution bullets wide-bullets
+# WTF are REST APIs?
 
-# Solution
+* URIs
+* HTTP verbs
+* HTTP Status codes
+* JSON params/response (or XML or whatever)
 
-* Shared DB
-* REST APIs (JSON preferred)
-* SSO
-* UI integration via IFrame +<br/>HTML5 PubSub
+!SLIDE code small
 
-!SLIDE image
+## GET https://api.twitter.com/1/users/show.json?screen_name=trabe
 
-![SAI Integration](sai_integration.jpg)
+    @@@ javascript
 
-<!--
-  Ojo al consumo bidireccional de APIses
--->
-
-!SLIDE problem
-
-# Problem
-
-## Integrate "nonintegrable"<br/> third party software
-
-!SLIDE solution bullets
-
-# Solution
-
-* Ad hoc REST API
-* Mail vacuums
-
-!SLIDE image
-
-![testo_wamp](testo_wamp.jpg)
+      {
+        "id": 6253282,
+        "name": "Trabe",
+        "location": "A Coruña, Spain",
+        "followers_count": 3000000
+        ...
+      }
 
 !SLIDE problem
 
 # Problem
 
-## Mail log: different sources
+## Run the same business logic from different places
 
 !SLIDE solution
 
 # Solution
 
-## Wrapper + REST API
+## Context objects
+## Runnable from app controllers,<br/>API controllers, cron jobs
 
-!SLIDE image
+!SLIDE code small
 
-![Mail wrapper](mail_wrapper.jpg)
+    @@@ ruby
+    class CreateUserContext
+      def initialize(user_params, notifier)
+        ...
+      end
 
-<!--
-  ventaja, no tenemos que tocar las aplicaciones, SRP
-  desventaja, rendimiento, alternativa: interceptar el envío
-  desde la librería (dos intercepciones diferentes :c )
--->
+      def run
+        user = User.new(user_params)
+        if user.save
+          notifier.send(:new_user, user)
+        end
+      end
+    end
+
+
+
+!SLIDE problem
+
+# Problem
+
+## Run business logic as different users, even as no user
+
+!SLIDE solution bullets
+
+# Solution
+
+* Context objects
+* Runnable as user
+* NullUser (NullObject pattern)
+
+!SLIDE bullets title-first
+
+# NullObject pattern
+
+* Remove branching logic
+* Avoid null errors
+* Improves testability
+
+<!-- No ramas -> menos tests -> SRP -->
+
+
+!SLIDE code smallest
+
+    @@@ coffeescript
+        class User
+          constructor : (name) ->
+            this.name = name
+
+        greet = (user) ->
+          if user
+            alert "Hi #{user.name}!"
+          else
+            alert "Hi stranger!"
+
+        john = new User('John')
+        keith = null
+
+        greet john    # Hi John!
+        greet keith   # Hi stranger!
+
+!SLIDE code smallest
+
+    @@@ coffeescript
+        class User
+          constructor : (name) ->
+            this.name = name
+
+        class Stranger extends User
+          constructor : ->
+            super 'stranger'
+
+        greet = (user) ->
+          alert "Hi #{user.name}!"
+
+        john = new User('John')
+        keith = new Stranger()
+
+        greet john    # Hi John!
+        greet keith   # Hi stranger!
 
 !SLIDE problem
 
@@ -201,176 +203,23 @@ Herramientas de build y despliegue específicas: Rake
       ...
 
 
-!SLIDE problem
-
-# Problem
-
-## Run the same business logic from different places
-
-!SLIDE solution
-
-# Solution
-
-## Context objects
-## Runnable from controllers,<br/>console, APIs, cron jobs
-
-!SLIDE code small
-
-    @@@ ruby
-    class CreateUserContext
-      def initialize(user_params, notifier)
-        ...
-      end
-
-      def run
-        user = User.new(user_params)
-        if user.save
-          notifier.send(:new_user, user)
-        end
-      end
-    end
-
-
-
 
 !SLIDE problem
 
 # Problem
 
-## Run business logic as different users, even as no user
+## User role based behaviour
 
 !SLIDE solution bullets
 
 # Solution
 
-* Context objects
-* Runnable as user
-* NullUser (NullObject pattern)
-
-!SLIDE bullets title-first
-
-# NullObject pattern
-
-* Remove branching logic
-* Avoid null errors
-* Improves testability
-
-<!-- No ramas -> menos tests -> SRP -->
-
-
-!SLIDE code smallest
-
-    @@@ coffeescript
-    class User
-      constructor : (name) ->
-        this.name = name
-
-    greet = (user) ->
-      if user
-        alert "Hi #{user.name}!"
-      else
-        alert "Hi stranger!"
-
-    john = new User('John')
-    keith = null
-
-    greet john    # Hi John!
-    greet keith   # Hi stranger!
-
-!SLIDE code smallest
-
-    @@@ coffeescript
-    class User
-      constructor : (name) ->
-        this.name = name
-
-    class Stranger extends User
-      constructor : ->
-        super 'stranger'
-
-    greet = (user) ->
-      alert "Hi #{user.name}!"
-
-    john = new User('John')
-    keith = new Stranger()
-
-    greet john    # Hi John!
-    greet keith   # Hi stranger!
-
-!SLIDE problem
-
-# Problem
-
-## Limit data access based on user roles
-
-!SLIDE solution bullets
-
-# Solution
-
-* Inject user with role dependent methods to access the model
-* Similar to State pattern (sort of)
+* Inject user with<br/> role dependent methods
+* State pattern (sort of)
 
 !SLIDE image
 
 ![User roles](user_roles.jpg)
-
-
-!SLIDE
-# DCI
-
-## Data, Context, Interaction
-
-<!--
-Llegamos a la arquitectura a través de mirar el DCI
-explicar el DCI con ejemplo de transferencia entre cuentas (con diag)
-No lo usamos tal cual por limitaciones tecnológicas.
--->
-
-!SLIDE code small
-
-    @@@ ruby
-    class BankAccount
-      attr_accessor :balance
-    end
-
-    module TransferSource
-      def withdraw(amount)
-        self.balance -= amount
-      end
-    end
-
-    module TransferTarget
-      def deposit(amount)
-        self.balance += amount
-      end
-    end
-
-!SLIDE code small
-
-    @@@ ruby
-    class TransferContext
-      def initialize(source, target, amount)
-        ...
-      end
-
-      def run
-        source.extends TransferSoure
-        target.extends TransferTarget
-
-        source.withdraw amount
-        target.deposit amount
-      end
-    end
-
-!SLIDE bullets title-first many-bullets
-
-# DCI
-
-* SRP
-* Reusability
-* Testability
-* Best with dynamic langs
-* Beware of implementation quirks
 
 
 !SLIDE problem
@@ -440,25 +289,3 @@ No lo usamos tal cual por limitaciones tecnológicas.
   Problema: transaccionalidad
 -->
 
-!SLIDE problem
-
-# Problem
-## Long running contexts
-
-!SLIDE solution bullets
-
-# Solution
-* Execute contexts in background
-* Jobs queues
-* Jobs executor
-
-!SLIDE image
-
-![Background Jobs](bg_jobs.jpg)
-
-<!--
-  Escalabilidad
-  Linealizar tiempo de respuesta de la app
-  Problema: persistencia de jobs. Gestión de error/repetición.
-    Infraestructura para recupearar los resultados
--->

@@ -1,6 +1,6 @@
 !SLIDE section
 
-# The many hells of Computer Science
+# The many hells<br/>of Computer Science
 
 <!-- you can explain that -->
 
@@ -55,7 +55,7 @@
 
 # Encoding hell
 
-## Use UTF-8. Use iconv wisely
+## Use UTF-8
 
 !SLIDE image
 
@@ -69,16 +69,13 @@
   Ejemplo de cosa incontrolable
 -->
 
-!SLIDE image
-
-![Fuck timezones](fuck_timezones.png)
-
 !SLIDE
 
 # Timezones, i18n, l11n, Accessibility hell
 
-## Always use UTC (beware of qwirks) __:D__
+## Always use UTC __:D__
 ## Treat i18n, l11n and accesibility as first class citizens
+## Beware of software/tools/libraries qwirks
 
 
 !SLIDE code smallest
@@ -105,6 +102,9 @@
 !SLIDE
 
 # A test should have<br/>detected the defect __;)__
+
+!SLIDE image
+![Fuck timezones](fuck_timezones.png)
 
 !SLIDE
 
@@ -262,67 +262,13 @@
 
 ## Inside an webapp MVC there is another MVC
 
-
-!SLIDE section
-
-# Parting note
-
-
-!SLIDE bullets title-first chain-bullets
-# SOLID (SRP in particular)
-
-* &#x2193;
-* Simple
-* &#x2193;
-* Easy to change
-* &#x2193;
-* Happiness __\\(^o^)/__
-
-!SLIDE bullets title-first chain-bullets
-# YAGNI
-
-* &#x2193;
-* Simple
-* &#x2193;
-* Easy to change
-* &#x2193;
-* Happiness __\\(^o^)/__
-
-!SLIDE bullets title-first chain-bullets
-
-# TESTs, TESTs, TESTs
-
-* &#x2193;
-* YAGNI + SOLID
-* &#x2193;
-* Simple
-* &#x2193;
-* Easy to change
-* &#x2193;
-* Happiness __\\(^o^)/__
-
-!SLIDE bullets title-first chain-bullets
-
-# Refactor, Refactor, Refactor
-##(code and tests)
-
-* &#x2193;
-* Better code & tests
-* &#x2193;
-* ... 
-* &#x2193;
-* Happiness __\\(^o^)/__
-
 !SLIDE
 
-# DRY more than your code
+# There are many more hells
 
-## Automatize, share, extract
+## Integration, legacy management, and so on
+<br/>
+<br/>
 
-!SLIDE
+# You'll discover them in time __T_T__
 
-## The most important commandment
-
-# Do what feels right!
-
-<!-- EJemplo de Twitter y ; -->
