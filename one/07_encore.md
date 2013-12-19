@@ -20,7 +20,7 @@
 
 # More real life problems & solutions
 
-!SLIDE
+!SLIDE section
 
 # More about NeoSAI
 ## the Laboratory Management System
@@ -229,3 +229,7 @@ No lo usamos tal cual por limitaciones tecnológicas.
 * Best with dynamic langs
 * Beware of implementation quirks
 
+
+!SLIDE image
+
+![Hasta la vista baby](hasta_la_vista_baby.png)

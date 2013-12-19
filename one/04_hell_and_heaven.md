@@ -59,11 +59,7 @@
 
 !SLIDE image
 
-![Encoding](encoding.png)
-
-!SLIDE image
-
-![Mail WAT](mail_wat.png)
+![Encoding](encoding_wat.png)
 
 <!--
   Ejemplo de cosa incontrolable
@@ -75,7 +71,7 @@
 
 ## Always use UTC __:D__
 ## Treat i18n, l11n and accesibility as first class citizens
-## Beware of software/tools/libraries qwirks
+## Beware of software/tools/libraries quirks
 
 
 !SLIDE code smallest
@@ -147,7 +143,7 @@
 
 ## Data evolves along your code
 ## Use some way of control/script/automate migrations
-## i.e RoR migrations, Flyway for Java
+## i.e. RoR migrations, Flyway for Java
 
 !SLIDE code smallest
 
@@ -187,7 +183,7 @@
 
 # Documentation/Code sync hell
 
-## Self explanatory code
+## Self explanatory code (DRY)
 ## Document APIs
 ## Document wisely
 ## Treat documentation as part of the code
@@ -258,7 +254,7 @@
 
 !SLIDE
 
-# MVC Inception
+# MVC Inception hell
 
 ## Inside an webapp MVC there is another MVC
 
