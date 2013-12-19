@@ -1,0 +1,1223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Surviving Software Development</title>
+
+  <meta name="viewport" content="width=device-width"/>
+
+  <link rel="stylesheet" href="./css/reset.css" type="text/css"/>
+  <link rel="stylesheet" href="./css/showoff.css" type="text/css"/>
+
+  <link type="text/css" href="./css/fg.menu.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/theme/ui.all.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/sh_style.css" rel="stylesheet" />
+
+  <script type="text/javascript" src="./js/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="./js/jquery-print.js"></script>
+  <script type="text/javascript" src="./js/jquery.batchImageLoad.js"></script>
+
+  <script type="text/javascript" src="./js/jquery.doubletap-0.1.js"></script>
+
+  <script type="text/javascript" src="./js/fg.menu.js"></script>
+  <script type="text/javascript" src="./js/showoff.js"></script>
+  <script type="text/javascript" src="./js/jTypeWriter.js"> </script>
+  <script type="text/javascript" src="./js/sh_main.min.js"></script>
+  <script type="text/javascript" src="./js/core.js"></script>
+  <script type="text/javascript" src="./js/showoffcore.js"></script>
+  <script type="text/javascript" src="./js/coffee-script.js"></script>
+
+  
+    
+      <script type="text/javascript" src="./js/sh_lang/sh_xml.min.js"></script>
+    
+      <script type="text/javascript" src="./js/sh_lang/sh_javascript.min.js"></script>
+    
+      <script type="text/javascript" src="./js/sh_lang/sh_ruby.min.js"></script>
+    
+      <script type="text/javascript" src="./js/sh_lang/sh_coffeescript.min.js"></script>
+    
+      <script type="text/javascript" src="./js/sh_lang/sh_java.min.js"></script>
+    
+  
+
+  
+    <link rel="stylesheet" href="./file/custom.css" type="text/css"/>
+  
+
+  
+
+  <script type="text/javascript">
+  $(function(){
+      setupPreso(false, './');
+  });
+  </script>
+
+</head>
+
+<body>
+
+<a tabindex="0" href="#search-engines" class="fg-button fg-button-icon-right ui-widget ui-state-default ui-corner-all" id="navmenu"><span class="ui-icon ui-icon-triangle-1-s"></span>slides</a>
+<div id="navigation" class="hidden"></div>
+
+<div id="help">
+  <table>
+    <tr><td class="key">z, ?</td><td>toggle help (this)</td></tr>
+    <tr><td class="key">space, &rarr;</td><td>next slide</td></tr>
+    <tr><td class="key">shift-space, &larr;</td><td>previous slide</td></tr>
+    <tr><td class="key">d</td><td>toggle debug mode</td></tr>
+    <tr><td class="key">## &lt;ret&gt;</td><td>go to slide #</td></tr>
+    <tr><td class="key">c, t</td><td>table of contents (vi)</td></tr>
+    <tr><td class="key">f</td><td>toggle footer</td></tr>
+    <tr><td class="key">r</td><td>reload slides</td></tr>
+    <tr><td class="key">n</td><td>toggle notes</td></tr>
+    <tr><td class="key">p</td><td>run preshow</td></tr>
+    <tr><td class="key">P</td><td>toggle pause</td></tr>
+  </table>
+</div>
+
+<div class="buttonNav">
+  <input type="submit" onClick="prevStep();" value="prev"/>
+  <input type="submit" onClick="nextStep();" value="next"/>
+</div>
+
+<div id="preso">loading presentation...</div>
+<div id="footer">
+  <span id="slideInfo"></span>
+  <span id="debugInfo"></span>
+  <span id="notesInfo"></span>
+</div>
+
+<div id="slides" class="offscreen" style="display:none;">
+<div class="slide" data-transition="none"><div class="content cover" ref="one/01_intro/1">
+<h1>Surviving Software Development</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/01_intro/2">
+<p><img src="./file/one/who_we_are.png" alt="Who we are"/>
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/01_intro/3">
+<p><img src="./file/one/trabe.png" alt="Trabe"/>
+
+<!--
+  a qué nos dedicamos, qué hacemos para quién, tecnologías, etc
+-->
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/01_intro/4">
+<p><img src="./file/one/men_at_work.png" alt="Men at work"/>
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_intro/5">
+<h1>Shiny happy opinionated people</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets toc bullets-first" ref="one/01_intro/6">
+<h1>Contents</h1>
+
+<ul>
+<li>Ideas</li>
+<li>Tools</li>
+<li>Real life problems &amp; solutions</li>
+<li>The many hells of Computer Science</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content section" ref="one/01_intro/7">
+<h1>Ideas</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content quote" ref="one/01_intro/8">
+<h1>A good design is easy to change, rather than easy to configure</h1>
+
+<h2>someone, somewhere</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_intro/9">
+<h1>There is no silver bullet</h1>
+
+<h2>Every architecture/design solution has pros &amp; cons</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_intro/10">
+<h1>Architecture &amp; technology should fit the problem</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_intro/11">
+<h1>Simple is better</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets columns" ref="one/01_intro/12">
+<h1>Simple solutions are easier to:</h1>
+
+<ul>
+<li>grasp</li>
+<li>design</li>
+<li>code</li>
+<li>document</li>
+<li>mantain</li>
+<li>evolve</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_intro/13">
+<h2>Architecture: the UNIX way</h2>
+
+<h1>Orchestrate simple components, each doing one thing, <br/>and doing it well</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_intro/14">
+<h1>Design: SOLID rock</h1>
+
+<h2>KISS &amp; DRY driven</h2>
+
+<!--
+son de OO pero aplicables a otro tipo de paradigmas
+-->
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_intro/15">
+<h1>S = Single Responsability</h1>
+
+<h2>A class should have only a single responsibility</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_intro/16">
+<h1>O =  Open/Closed</h1>
+
+<h2>Open for extension. Closed for modification</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_intro/17">
+<h1>L = Liskov Substitution</h1>
+
+<h2>objects in a program should be replaceable with <br/>instances of their subtypes without altering<br/>the correctness of that program</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_intro/18">
+<h1>I = Interface segregation</h1>
+
+<h2>Many client-specific interfaces are better than<br/>one general-purpose interface</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_intro/19">
+<h1>D = Dependency inversion</h1>
+
+<h2>Depend upon Abstractions. Do not depend upon concretions (i.e. Dependency injection)</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_intro/20">
+<h1>We are always SRP driven</h1>
+
+<h1>You should be too</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_intro/21">
+<h1>SOLID leads to Design Patterns</h1>
+
+<h2>(Designs patterns are SOLID)</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/01_intro/22">
+<p><img src="./file/one/be_oo_my_friend.png" alt="Be OO, my friend"/>
+
+<!--
+  Sigue lo SOLID y encapuslación y todo esto en cualquier lenguaje/paradigma que te irá mejor :D
+-->
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets bullets-first" ref="one/01_intro/23">
+<h1>Other useful buzzwords</h1>
+
+<ul>
+<li>YAGNI</li>
+<li>CoC</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code smallest" ref="one/01_intro/24">
+<pre class="sh_xml"><code>&lt;action path="/admin/ShowConfiguration"
+  type="controller.admin.ShowConfigurationAction"
+  scope="request"&gt;
+  &lt;forward name="success" 
+           path=".admin.ShowConfiguration"/&gt;
+&lt;/action&gt;</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/01_intro/25">
+<p><img src="./file/one/yu_no_admin_showconfiguration.png" alt="Y U NO admin.ShowConfiguration"/>
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets columns title-first" ref="one/01_intro/26">
+<h1>TEST, TEST, TEST</h1>
+
+<ul>
+<li>TDD, BDD</li>
+<li>Regresions</li>
+<li>Benchmarks</li>
+<li>DI</li>
+<li>Refactoring</li>
+<li>CI</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets title-first chain-bullets" ref="one/01_intro/27">
+<h1>TEST, TEST, TEST</h1>
+
+<ul>
+<li>Complex test</li>
+<li>&#x2193;</li>
+<li>Bad design</li>
+<li>&#x2193;</li>
+<li>Refactor &amp; DI</li>
+<li>&#x2193;</li>
+<li>Better design. Better API</li>
+</ul>
+
+<!--
+  DI -> Dependency Injection
+  Test complicado <-> código mal diseñado
+  Test -> Definir el api desde el punto de vista del "cliente"
+  Statist vs Mockist (Mock what you own)
+-->
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/01_intro/28">
+<p><img src="./file/one/god_kitten.png" alt="Every time god kills a kitten"/>
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content section" ref="one/02_meth/1">
+<h1>Tools</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/02_meth/2">
+<h1>The Tr&#xE1;bico process</h1>
+
+<h2>Agile, sort of <strong>: )</strong></h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/02_meth/3">
+<h1>Tools</h1>
+
+<h2>Continous improvement. Always trying new stuff <strong>: )</strong></h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets title-first" ref="one/02_meth/4">
+<h1>Project development</h1>
+
+<ul>
+<li>TDD</li>
+<li>Code reviews</li>
+<li>Pair programming</li>
+</ul>
+
+<!--
+  Code review: presencial vs Bitbucket
+  Pair programming: problemas chungos, formación, cansancio y ganas de no hacer nada a solas xD
+-->
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/02_meth/5">
+<p><img src="./file/one/trello.png" alt="Trello"/>
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/02_meth/6">
+<p><img src="./file/one/git_lol.png" alt="Git"/>
+
+<!--
+  Hablar de gitflow vs githubflow
+-->
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/02_meth/7">
+<p><img src="./file/one/bitbucket_readme.png" alt="Bitbucket README"/>
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/02_meth/8">
+<p><img src="./file/one/bitbucket_pull_request.png" alt="Bitbucket Pull Request"/>
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/02_meth/9">
+<p><img src="./file/one/bitbucket_pull_request_code.png" alt="Bitbucket Pull Request Diff"/>
+
+<!--
+  Diffs y comentarios permiten code reviews asíncronas y remotas
+-->
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/02_meth/10">
+<p><img src="./file/one/confluence.png" alt="Confluence"/>
+
+<!--
+  Compartir conocimiento. Preferir que el conocimiento específico 
+  esté como parte del README del proyecto o similar.
+-->
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets bullets-first" ref="one/02_meth/11">
+<ul>
+<li>conventions</li>
+<li>automation</li>
+<li>scripts</li>
+<li>bootstrap</li>
+</ul>
+
+<!--
+  Enforcing de convenciones de código comunes, etc. Entornos parecidos, herramientas y plugins comunes. .dotfiles en github
+  Automatización de todo lo posible, setup, despliegue, tareas de mantenimiento
+  Hacemos scripts. -> Repositorio de scripts compartido
+  Facilitar el bootstrap del proyecto: README + script setup
+-->
+</div>
+</div><div class="slide" data-transition="none"><div class="content code small terminal" ref="one/02_meth/12">
+<pre><code>$ git clone trabe:awesome-project
+$ cd awesome-project
+$ ./bin/setup</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets title-first" ref="one/02_meth/13">
+<h1>TESTs, TESTs, TESTs</h1>
+
+<ul>
+<li>Automatic run (guard)</li>
+<li>Mocking</li>
+<li>Metrics (coverage)</li>
+</ul>
+
+<!--
+  Tests guiados por mocks, llevan al buen diseño
+  Mock, Factorias, Mock de 3rd parties, coverage
+  ¿¿Mockists vs State-ist??
+  Deberíamos tener CI  (-_- U)
+-->
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets title-first" ref="one/02_meth/14">
+<h1>Conveniences</h1>
+
+<ul>
+<li>Transpilers: CoffeScript, SASS, etc.</li>
+<li>Debugging tools</li>
+<li>Live Reload. YAY!</li>
+</ul>
+
+<!--
+  En función de la tecnología usamos herramientas
+  transpilers: escritura eficiente. Ojo al debug
+  mezclar: ej. sprokets + SASS en J2EE
+-->
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/02_meth/15">
+<p><img src="./file/one/chrome_tools_dom.png" alt="Chrome tools"/>
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/02_meth/16">
+<p><img src="./file/one/chrome_tools_debugger.png" alt="Chrome tools"/>
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/02_meth/17">
+<p><img src="./file/one/chrome_tools_network.png" alt="Chrome tools"/>
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content section" ref="one/03_real_life/1">
+<h1>Real life problems &amp; solutions</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/03_real_life/2">
+<h2>Context</h2>
+
+<h1>NeoSAI</h1>
+
+<h2>A Laboratory Management System</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/03_real_life/3">
+<p><img src="./file/one/neosai_design.jpg" alt="NeoSAI design"/>
+
+<!--
+  También hay serializadores: decoradores específicos :D
+-->
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content problem" ref="one/03_real_life/4">
+<h1>Problem</h1>
+
+<h2>Different kinds of UIs</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content solution bullets wide-bullets" ref="one/03_real_life/5">
+<h1>Solution</h1>
+
+<ul>
+<li>Basic CRUD: forms &amp; listings</li>
+<li>Advanced CRUD: JS components + AJAX</li>
+<li>Complex tasks: Single-page app + REST</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets title-first" ref="one/03_real_life/6">
+<h1>WTF are REST APIs?</h1>
+
+<ul>
+<li>Theory<br/>duh, duh, duh (and more bullshit)</li>
+<li>Practice<br/>way to comunicate apps/systems through HTTP</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets title-first" ref="one/03_real_life/7">
+<h1>WTF are REST APIs?</h1>
+
+<ul>
+<li>URIs</li>
+<li>HTTP verbs</li>
+<li>HTTP Status codes</li>
+<li>JSON params/response (or XML or whatever)</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code small" ref="one/03_real_life/8">
+<h2>GET https://api.twitter.com/1/users/show.json?screen_name=trabe</h2>
+
+<pre class="sh_javascript"><code>
+  {
+    "id": 6253282,
+    "name": "Trabe",
+    "location": "A Coru&#xF1;a, Spain",
+    "followers_count": 3000000
+    ...
+  }</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content problem" ref="one/03_real_life/9">
+<h1>Problem</h1>
+
+<h2>Run the same business logic from different places</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content solution" ref="one/03_real_life/10">
+<h1>Solution</h1>
+
+<h2>Context objects</h2>
+
+<h2>Runnable from app controllers,<br/>API controllers, cron jobs</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code small" ref="one/03_real_life/11">
+<pre class="sh_ruby"><code>class CreateUserContext
+  def initialize(user_params, notifier)
+    ...
+  end
+
+  def run
+    user = User.new(user_params)
+    if user.save
+      notifier.send(:new_user, user)
+    end
+  end
+end</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content problem" ref="one/03_real_life/12">
+<h1>Problem</h1>
+
+<h2>Run business logic as different users, even as no user</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content solution bullets" ref="one/03_real_life/13">
+<h1>Solution</h1>
+
+<ul>
+<li>Context objects</li>
+<li>Runnable as user</li>
+<li>NullUser (NullObject pattern)</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets title-first" ref="one/03_real_life/14">
+<h1>NullObject pattern</h1>
+
+<ul>
+<li>Remove branching logic</li>
+<li>Avoid null errors</li>
+<li>Improves testability</li>
+</ul>
+
+<!-- No ramas -> menos tests -> SRP -->
+</div>
+</div><div class="slide" data-transition="none"><div class="content code smallest" ref="one/03_real_life/15">
+<pre class="sh_coffeescript"><code>    class User
+      constructor : (name) -&gt;
+        this.name = name
+
+    greet = (user) -&gt;
+      if user
+        alert "Hi #{user.name}!"
+      else
+        alert "Hi stranger!"
+
+    john = new User('John')
+    keith = null
+
+    greet john    # Hi John!
+    greet keith   # Hi stranger!</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code smallest" ref="one/03_real_life/16">
+<pre class="sh_coffeescript"><code>    class User
+      constructor : (name) -&gt;
+        this.name = name
+
+    class Stranger extends User
+      constructor : -&gt;
+        super 'stranger'
+
+    greet = (user) -&gt;
+      alert "Hi #{user.name}!"
+
+    john = new User('John')
+    keith = new Stranger()
+
+    greet john    # Hi John!
+    greet keith   # Hi stranger!</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content problem" ref="one/03_real_life/17">
+<h1>Problem</h1>
+
+<h2>Complex permission checks</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content quote" ref="one/03_real_life/18">
+<h1>Can change a report if I am the author or its author is one of my subordinates and the report has not been signed</h1>
+
+<h2>the customer</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content solution" ref="one/03_real_life/19">
+<h1>Solution</h1>
+
+<h2>Policy objects</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code small" ref="one/03_real_life/20">
+<pre class="sh_ruby"><code>
+class ReportsController
+  def edit
+    report = Report.find(params[:id])
+    can_edit = ReportEditorPolicy.
+      new(current_user, report).comply?
+    ...</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code small" ref="one/03_real_life/21">
+<pre class="sh_ruby"><code>class ReportEditorPolicy &lt; Policy
+  def initialize(user, report)
+    ...
+  end
+
+  def comply?
+    (owner_of_report? or
+    subordinate_report?) and
+    unsigned_report?
+  end
+
+  ...</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content problem" ref="one/03_real_life/22">
+<h1>Problem</h1>
+
+<h2>User role based behaviour</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content solution bullets" ref="one/03_real_life/23">
+<h1>Solution</h1>
+
+<ul>
+<li>Inject user with<br/> role dependent methods</li>
+<li>State pattern (sort of)</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/03_real_life/24">
+<p><img src="./file/one/user_roles.jpg" alt="User roles"/>
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content problem" ref="one/03_real_life/25">
+<h1>Problem</h1>
+
+<h2>Present same model object in different ways on different views</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content solution bullets" ref="one/03_real_life/26">
+<h1>Solution</h1>
+
+<ul>
+<li>Decorator pattern</li>
+<li>Decorate associations too</li>
+<li>One or multiple decorators</li>
+<li>Variant: presenter pattern</li>
+</ul>
+
+<!--
+  Recomentar as needed lo de los serializadores :D
+-->
+</div>
+</div><div class="slide" data-transition="none"><div class="content code smallest" ref="one/03_real_life/27">
+<pre class="sh_ruby"><code>class User
+  def initialize(name, email)
+    ...
+  end
+end
+
+class UserDecorator
+  def initialize(user)
+    ...
+  end
+
+  def name
+    user.name
+  end
+
+  def email
+    user.name + "&lt;" + user.email + "&gt;"
+  end
+end</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code small" ref="one/03_real_life/28">
+<pre class="sh_ruby"><code>user = User.new('john', 'john@mail.com')
+decorated_user = UserDecorator.new(user)
+mail = new Mail()
+
+mail.send to: decorated_user.email</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content problem" ref="one/03_real_life/29">
+<h1>Problem</h1>
+
+<h2>Global search</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content solution bullets" ref="one/03_real_life/30">
+<h1>Solution</h1>
+
+<ul>
+<li>External Indexer (REST API)</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/03_real_life/31">
+<p><img src="./file/one/indexer.jpg" alt="Indexer"/>
+
+<!--
+  Ventaja: transparencia, independencia de BD
+  Problema: transaccionalidad
+-->
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content section" ref="one/04_hell_and_heaven/1">
+<h1>The many hells<br/>of Computer Science</h1>
+
+<!-- you can explain that -->
+</div>
+</div><div class="slide" data-transition="none"><div class="content quote" ref="one/04_hell_and_heaven/2">
+<h1>There are only two hard things in Computer Science: cache invalidation and naming things.</h1>
+
+<h2>Phil Karlton</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/04_hell_and_heaven/3">
+<h1>Easy cache invalidation</h1>
+
+<h2>LRU Caches + Auto expiring keys</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code small" ref="one/04_hell_and_heaven/4">
+<pre class="sh_ruby"><code>
+  class User
+    def cache_key
+      "user#" + id + "#" +
+        updated_at.to_millis
+    end
+  end
+
+
+  cache user.cache_key do
+    ...
+  end</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/04_hell_and_heaven/5">
+<h1>Easy naming</h1>
+
+<h2>There is no easy naming. Sorry folks!</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/04_hell_and_heaven/6">
+<p><img src="./file/one/yao.png" alt="Yao Ming"/>
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/04_hell_and_heaven/7">
+<h1>Maybe there are more hard things</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/04_hell_and_heaven/8">
+<p><img src="./file/one/mother_of_god.png" alt="Mother of God"/>
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/04_hell_and_heaven/9">
+<h1>Encoding hell</h1>
+
+<h2>Use UTF-8</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/04_hell_and_heaven/10">
+<p><img src="./file/one/encoding_wat.png" alt="Encoding"/>
+
+<!--
+  Ejemplo de cosa incontrolable
+-->
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/04_hell_and_heaven/11">
+<h1>Timezones, i18n, l11n, Accessibility hell</h1>
+
+<h2>Always use UTC <strong>:D</strong></h2>
+
+<h2>Treat i18n, l11n and accesibility as first class citizens</h2>
+
+<h2>Beware of software/tools/libraries quirks</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code smallest" ref="one/04_hell_and_heaven/12">
+<pre class="sh_ruby"><code>
+  # DB stores UTC. Conversion done by Rails
+  r = Report.first
+  r.created_at # =&gt; 2013-11-06 00:00:00 +0100
+  r.created_at.utc # =&gt; 2013-11-05 23:00:00 UTC
+
+  Report.where('DATE(created_at) = ?', 
+    r.created_at.to_date)
+
+  # Ooooopppps!
+  #
+  #  SELECT * FROM reports
+  #  WHERE (DATE(created_at) = '2013-11-06')</code></pre>
+
+<!--
+  Ejemplo de cosa controlable
+-->
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/04_hell_and_heaven/13">
+<h1>A test should have<br/>detected the defect <strong>;)</strong></h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/04_hell_and_heaven/14">
+<p><img src="./file/one/fuck_timezones.png" alt="Fuck timezones"/>
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/04_hell_and_heaven/15">
+<h1>The money hell</h1>
+
+<h2>Beware of spanish taxes and accounting</h2>
+
+<h2>Use f**king cents</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/04_hell_and_heaven/16">
+<h1>The money hell <br/>a.k.a the floating point hell</h1>
+
+<h2>Stick to integers. Use fixed point</h2>
+
+<!--
+  Floats are fast in today CPUs an acceptable for
+  a lot of things (i.e. 3D graphics), but not for
+  money. For money you need 100% accurate numeric types
+-->
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/04_hell_and_heaven/17">
+<p><img src="./file/one/show_me_the_money.jpg" alt="Show me the money"/>
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/04_hell_and_heaven/18">
+<h1>Deployment and<br/>environments hell</h1>
+
+<h2>Define enviroments from square one</h2>
+
+<h2>Automatize deployment as much as you can</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/04_hell_and_heaven/19">
+<p><img src="./file/one/mina.gif" alt="Mina deploy"/>
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/04_hell_and_heaven/20">
+<h1>Migration hell</h1>
+
+<h2>Data evolves along your code</h2>
+
+<h2>Use some way of control/script/automate migrations</h2>
+
+<h2>i.e. RoR migrations, Flyway for Java</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code smallest" ref="one/04_hell_and_heaven/21">
+<pre class="sh_ruby"><code>
+add_column :invoices, :report_id, :integer
+
+Invoices.find_each do |invoice|
+  order = Order.where(number: invoice.order_number)
+  invoice.order = order
+end</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/04_hell_and_heaven/22">
+<h1>Beware of data massaging</h1>
+
+<h2>Either complex or simple <strong>&#xAC;&#xAC;</strong></h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code smallest" ref="one/04_hell_and_heaven/23">
+<pre class="sh_ruby"><code>
+add_column :invoices, :report_id, :integer
+
+Invoices.find_each do |invoice|
+  order = Order.where(number: invoice.order_number)
+
+  raise "Fuck" if order.client_id != invoice.client_id
+
+  invoice.order = order
+end</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/04_hell_and_heaven/24">
+<h1>Documentation/Code sync hell</h1>
+
+<h2>Self explanatory code (DRY)</h2>
+
+<h2>Document APIs</h2>
+
+<h2>Document wisely</h2>
+
+<h2>Treat documentation as part of the code</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code smallest" ref="one/04_hell_and_heaven/25">
+<pre class="sh_java"><code>
+/**
+ * Returns the user names in alphabetical order
+ * @returns the names
+ */
+public String[] orderedNames() {
+  return sortAlphabetically(this.getNames());
+}
+
+/*
+ * Sort with quicksort algorithm
+ */
+private String[] sortAlphabetically(String[] words) {
+  // lines of elegant yet uninteligible code ;)
+}</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/04_hell_and_heaven/26">
+<h1>Multithreading hell</h1>
+
+<h2>Use multi process</h2>
+
+<h2>Avoid too much low level</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets bullets-first" ref="one/04_hell_and_heaven/27">
+<h1>Inter Process Communication</h1>
+
+<ul>
+<li>Unix Sockets</li>
+<li>Queues</li>
+<li>Shared memory</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/04_hell_and_heaven/28">
+<h1>Or use a library!</h1>
+
+<h1>Or switch to erlang :P</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets title-first" ref="one/04_hell_and_heaven/29">
+<h1>Fragmentation hell</h1>
+
+<ul>
+<li>Do your HTML5/CSS3/JS homework</li>
+<li>SOLID also applies (SMACSS, etc)</li>
+<li>Know how to tame browsers</li>
+<li>Know how to tame mobile</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/04_hell_and_heaven/30">
+<p><img src="./file/one/bit_ok.png" alt="Bitbucket Ok"/>
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/04_hell_and_heaven/31">
+<p><img src="./file/one/bit_bad.png" alt="Bitbucket full"/>
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/04_hell_and_heaven/32">
+<p><img src="./file/one/bit_android.png" alt="Bitbucket Android"/>
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/04_hell_and_heaven/33">
+<h1>MVC Inception hell</h1>
+
+<h2>Inside an webapp MVC there is another MVC</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/04_hell_and_heaven/34">
+<h1>There are many more hells</h1>
+
+<h2>Integration, legacy management, and so on</h2>
+
+<p><br/>
+<br/></p>
+
+<h1>You'll discover them in time <strong>T_T</strong></h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content section" ref="one/05_parting/1">
+<h1>Parting note</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets title-first chain-bullets" ref="one/05_parting/2">
+<h1>SOLID (SRP in particular)</h1>
+
+<ul>
+<li>&#x2193;</li>
+<li>Simple</li>
+<li>&#x2193;</li>
+<li>Easy to change</li>
+<li>&#x2193;</li>
+<li>Happiness <strong>\(^o^)/</strong></li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets title-first chain-bullets" ref="one/05_parting/3">
+<h1>YAGNI</h1>
+
+<ul>
+<li>&#x2193;</li>
+<li>Simple</li>
+<li>&#x2193;</li>
+<li>Easy to change</li>
+<li>&#x2193;</li>
+<li>Happiness <strong>\(^o^)/</strong></li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets title-first chain-bullets" ref="one/05_parting/4">
+<h1>TESTs, TESTs, TESTs</h1>
+
+<ul>
+<li>&#x2193;</li>
+<li>YAGNI + SOLID</li>
+<li>&#x2193;</li>
+<li>Simple</li>
+<li>&#x2193;</li>
+<li>Easy to change</li>
+<li>&#x2193;</li>
+<li>Happiness <strong>\(^o^)/</strong></li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets title-first chain-bullets" ref="one/05_parting/5">
+<h1>Refactor, Refactor, Refactor</h1>
+
+<h2>(code and tests)</h2>
+
+<ul>
+<li>&#x2193;</li>
+<li>Better code &amp; tests</li>
+<li>&#x2193;</li>
+<li>... </li>
+<li>&#x2193;</li>
+<li>Happiness <strong>\(^o^)/</strong></li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/05_parting/6">
+<h1>DRY more than your code</h1>
+
+<h2>Automatize, share, extract</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/05_parting/7">
+<p><img src="./file/one/read_write.png" alt="Read and write"/>
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/06_hasta_la_vista_baby/1">
+<p><img src="./file/one/hasta_la_vista_baby.png" alt="Hasta la vista baby"/>
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/06_hasta_la_vista_baby/2">
+<h1>Questions?</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/06_hasta_la_vista_baby/3">
+<h1>Do your PFC at Trabe</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/07_encore/1">
+<h1>.</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/07_encore/2">
+<h1>..</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/07_encore/3">
+<h1>...</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content section" ref="one/07_encore/4">
+<h1>Encore</h1>
+
+<h2>It's up to you</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content section" ref="one/07_encore/5">
+<h1>More real life problems &amp; solutions</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content section" ref="one/07_encore/6">
+<h1>More about NeoSAI</h1>
+
+<h2>the Laboratory Management System</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content problem" ref="one/07_encore/7">
+<h1>Problem</h1>
+
+<h2>Integrate new &amp; legacy app</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content solution bullets wide-bullets" ref="one/07_encore/8">
+<h1>Solution</h1>
+
+<ul>
+<li>Shared DB</li>
+<li>REST APIs (JSON preferred)</li>
+<li>SSO</li>
+<li>UI integration via IFrame +<br/>HTML5 PubSub</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/07_encore/9">
+<p><img src="./file/one/sai_integration.jpg" alt="SAI Integration"/>
+
+<!--
+  Ojo al consumo bidireccional de APIses
+-->
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content problem" ref="one/07_encore/10">
+<h1>Problem</h1>
+
+<h2>Integrate "nonintegrable"<br/> third party software</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content solution bullets" ref="one/07_encore/11">
+<h1>Solution</h1>
+
+<ul>
+<li>Ad hoc REST API</li>
+<li>Mail vacuums</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/07_encore/12">
+<p><img src="./file/one/testo_wamp.jpg" alt="testo_wamp"/>
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content problem" ref="one/07_encore/13">
+<h1>Problem</h1>
+
+<h2>Mail log: different sources</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content solution" ref="one/07_encore/14">
+<h1>Solution</h1>
+
+<h2>Wrapper + REST API</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/07_encore/15">
+<p><img src="./file/one/mail_wrapper.jpg" alt="Mail wrapper"/>
+
+<!--
+  ventaja, no tenemos que tocar las aplicaciones, SRP
+  desventaja, rendimiento, alternativa: interceptar el envío
+  desde la librería (dos intercepciones diferentes :c )
+-->
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content problem" ref="one/07_encore/16">
+<h1>Problem</h1>
+
+<h2>Long running contexts</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content solution bullets" ref="one/07_encore/17">
+<h1>Solution</h1>
+
+<ul>
+<li>Execute contexts in background</li>
+<li>Jobs queues</li>
+<li>Jobs executor</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/07_encore/18">
+<p><img src="./file/one/bg_jobs.jpg" alt="Background Jobs"/>
+
+<!--
+  Escalabilidad
+  Linealizar tiempo de respuesta de la app
+  Problema: persistencia de jobs. Gestión de error/repetición.
+    Infraestructura para recupearar los resultados
+-->
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content section" ref="one/07_encore/19">
+<h1>FEDERICO</h1>
+
+<h2>Application integration</h2>
+
+<h2>a.k.a. real life hitting your groin</h2>
+
+<!--
+Ejemplo de arquitectura para integrar múltiples aplicaciones
+-->
+</div>
+</div><div class="slide" data-transition="none"><div class="content problem" ref="one/07_encore/20">
+<h1>Problem</h1>
+
+<h2>Signup/signin on multiple services</h2>
+
+<h2>Consolidate personal info</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content solution bullets bullets-first" ref="one/07_encore/21">
+<h1>Solution</h1>
+
+<ul>
+<li>Procedure repository</li>
+<li>Orchestrate services (Service Bus)</li>
+<li>Single Sign On</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/07_encore/22">
+<p><img src="./file/one/federico_ideal.jpg" alt="Federico ideal"/>
+
+<!--
+Solución ideal:
+Federacion de autenticacion
+Bus + Pull+Push + Operaciones WS
+Webs diferentes tecnologías consumen WS
+-->
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/07_encore/23">
+<p><img src="./file/one/federico_full.jpg" alt="Federico full"/>
+
+<!--
+Solución de compromiso
+Sólo Pull, Tareas periódicas para push
+Adaptadores: BD, LDAP, WS, Comandos SSH, etc.
+
+RObot de keystroke xDDDD :p
+-->
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets bullets-first" ref="one/07_encore/24">
+<h1>Technology</h1>
+
+<ul>
+<li>Java stack</li>
+<li>Ruby for automation</li>
+</ul>
+
+<!--
+Herramientas de build y despliegue específicas: Rake
+-->
+</div>
+</div><div class="slide" data-transition="none"><div class="content section" ref="one/07_encore/25">
+<h1>DCI</h1>
+
+<h2>Data, Context, Interaction</h2>
+
+<!--
+Llegamos a la arquitectura a través de mirar el DCI
+explicar el DCI con ejemplo de transferencia entre cuentas (con diag)
+No lo usamos tal cual por limitaciones tecnológicas.
+-->
+</div>
+</div><div class="slide" data-transition="none"><div class="content code small" ref="one/07_encore/26">
+<pre class="sh_ruby"><code>class BankAccount
+  attr_accessor :balance
+end
+
+module TransferSource
+  def withdraw(amount)
+    self.balance -= amount
+  end
+end
+
+module TransferTarget
+  def deposit(amount)
+    self.balance += amount
+  end
+end</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code small" ref="one/07_encore/27">
+<pre class="sh_ruby"><code>class TransferContext
+  def initialize(source, target, amount)
+    ...
+  end
+
+  def run
+    source.extends TransferSoure
+    target.extends TransferTarget
+
+    source.withdraw amount
+    target.deposit amount
+  end
+end</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets title-first many-bullets" ref="one/07_encore/28">
+<h1>DCI</h1>
+
+<ul>
+<li>SRP</li>
+<li>Reusability</li>
+<li>Testability</li>
+<li>Best with dynamic langs</li>
+<li>Beware of implementation quirks</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content image" ref="one/07_encore/29">
+<p><img src="./file/one/hasta_la_vista_baby.png" alt="Hasta la vista baby"/>
+</p>
+</div>
+</div></div>
+<div id="pauseScreen">
+  
+</div>
+
+</body>
+</html>
